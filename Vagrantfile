@@ -7,6 +7,7 @@ Vagrant::Config.run do |config|
     puppet.environment      = "development"
     puppet.environment_path = "environments"
   end
-  # http://stackoverflow.com/a/12085692/801426
+  # http://stackoverflow.com/a/16127657/801426
+  config.ssh.private_key_path = "~/.ssh/id_rsa"
   config.ssh.forward_agent = true
 end
