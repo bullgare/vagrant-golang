@@ -7,4 +7,6 @@ Vagrant::Config.run do |config|
     puppet.environment      = "development"
     puppet.environment_path = "environments"
   end
+  # http://stackoverflow.com/a/12085692/801426
+  config.ssh.forward_agent = true
 end
